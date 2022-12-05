@@ -1,0 +1,22 @@
+{
+  "name": "implementing-system-design-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAE-HUN/implementing-system-design-interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAE-HUN/implementing-system-design-interview/issues"
+  },
+  "homepage": "https://github.com/SAE-HUN/implementing-system-design-interview#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
