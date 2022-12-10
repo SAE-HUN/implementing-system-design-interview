@@ -75,7 +75,7 @@ app.get("/:token/:method", async (req, res) => {
   setMulti.set(`API_CREDITS:${token}:COUNTER`, api_credits_counter);
   setMulti.set(`REQUESTS:${token}:LAST_CHECK_TIME`, now);
   setMulti.set(`REQUESTS:${token}:TOKENS_IN_BUCKET`, tokens_in_bucket);
-  await setMulti.exec();
+  await setMulti.exec(); // TODO: Execute update using atomic transaction
 
   res.setHeader(
     "X-Ratelimit-Remaining",
@@ -90,7 +90,7 @@ app.get("/:token/:method", async (req, res) => {
     "X-Ratelimit-Limit",
     JSON.stringify({ api_credits_per_month, requests_per_sec })
   );
-  return res.send("Success");
+  return res.send("Success"); // TODO: Forward to main server
 });
 
 app.listen(port, () => {
