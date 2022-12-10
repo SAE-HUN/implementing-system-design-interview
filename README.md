@@ -1,3 +1,7 @@
+## Architecture
+
+![untitled (1)](https://user-images.githubusercontent.com/59135804/206873270-93eb769a-1e55-48c8-9411-57601c80c0bf.png)
+
 ## Prerequisites
 
 ### Install Node.js
