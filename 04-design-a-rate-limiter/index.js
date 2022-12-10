@@ -1,11 +1,12 @@
 const express = require("express");
 const redis = require("redis");
+require("dotenv").config();
 
 const app = express();
-const port = 8080;
-
-const port_redis = 6379;
-const redis_client = redis.createClient(port_redis, "localhost.com");
+const redis_client = redis.createClient(
+  process.env.PORT_REDIS,
+  process.env.URL_REDIS
+);
 redis_client.connect();
 
 app.get("/", (req, res) => {
@@ -93,6 +94,6 @@ app.get("/:token/:method", async (req, res) => {
   return res.send("Success"); // TODO: Forward to main server
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT_APP, () => {
   console.log("Listening...");
 });
