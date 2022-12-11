@@ -68,11 +68,6 @@ set REQUESTS:{token}:TOKENS_IN_BUCKET {value}
 
 ![Untitled](https://user-images.githubusercontent.com/59135804/206871676-3499ce75-6c20-4a51-a716-22bf510a332d.png)
 
-## Improvements
-
-- Rate limiter can retrieve limit rule(such as rps) without cache server
-  - Token maker should make token which include limit rule information, encrypted by secret key
-  - Rate limiter can retrieve limit rule information about token using secret key
 
 ## References
 
