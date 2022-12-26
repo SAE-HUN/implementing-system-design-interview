@@ -1,0 +1,4 @@
+forward_host: 127.0.0.1
+hash_algorithm: md5
+number_of_nodes: 30
+number_of_replicas: 1000
